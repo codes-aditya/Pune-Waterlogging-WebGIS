@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pune Waterlogging Citizen Report</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Pune Waterlogging Report</h1>
+
+        <p>
+            Report a waterlogging incident in Pune.
+        </p>
+
+        <form id="reportForm">
+
+            <label for="citizen_name">
+                Citizen Name
+            </label>
+
+            <input
+                type="text"
+                id="citizen_name"
+                name="citizen_name"
+                required
+            >
+
+
+            <label for="contact_number">
+                Contact Number
+            </label>
+
+            <input
+                type="text"
+                id="contact_number"
+                name="contact_number"
+            >
+
+
+<label for="water_depth">Water Depth</label>
+
+<select id="water_depth" name="water_depth" required>
+    <option value="">Select estimated water level</option>
+
+    <option value="Foot level (0-6 inches)">
+        Foot level — 0–6 inches
+    </option>
+
+    <option value="Ankle deep (6-12 inches)">
+        Ankle deep — 6–12 inches
+    </option>
+
+    <option value="Knee deep (12-24 inches)">
+        Knee deep — 12–24 inches
+    </option>
+
+    <option value="Above knee / thigh (24-36 inches)">
+        Above knee / thigh — 24–36 inches
+    </option>
+
+    <option value="Waist deep (36-42 inches)">
+        Waist deep — 36–42 inches
+    </option>
+
+    <option value="Chest deep (42-60 inches)">
+        Chest deep — 42–60 inches
+    </option>
+
+    <option value="First-floor level">
+        First-floor level — building-based estimate
+    </option>
+
+    <option value="Second-floor level">
+        Second-floor level — building-based estimate
+    </option>
+
+    <option value="Cannot estimate">
+        Cannot estimate
+    </option>
+</select>
+            <label for="cause">
+                Cause
+            </label>
+
+            <select
+                id="cause"
+                name="cause"
+                required
+            >
+
+                <option value="">
+                    Select cause
+                </option>
+
+                <option value="Drain Choked">
+                    Drain Choked
+                </option>
+
+                <option value="River Overflow">
+                    River Overflow
+                </option>
+
+                <option value="Poor Drainage">
+                    Poor Drainage
+                </option>
+
+                <option value="Heavy Rainfall">
+                    Heavy Rainfall
+                </option>
+
+            </select>
+
+
+            <label for="location_desc">
+                Location Description
+            </label>
+
+            <textarea
+                id="location_desc"
+                name="location_desc">
+            </textarea>
+
+
+            <button
+                type="button"
+                onclick="getLocation()">
+
+                📍 Get My Location
+
+            </button>
+
+
+            <p id="locationStatus">
+                Location not captured
+            </p>
+
+
+            <input
+                type="hidden"
+                id="latitude"
+                name="latitude"
+            >
+
+            <input
+                type="hidden"
+                id="longitude"
+                name="longitude"
+            >
+
+
+            <input
+                type="hidden"
+                id="gps_accuracy"
+                name="gps_accuracy"
+            >
+
+
+            <label for="photo">
+                Upload Photo
+            </label>
+
+            <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept="image/*"
+            >
+
+
+            <button type="submit">
+
+                Submit Report
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
